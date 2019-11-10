@@ -25,7 +25,7 @@ namespace mola
  * \ingroup mola_fe_g2o_dataset_grp */
 class G2ODataset : public FrontEndBase
 {
-    DEFINE_MRPT_OBJECT(G2ODataset)
+    DEFINE_MRPT_OBJECT(G2ODataset, mola)
 
    public:
     G2ODataset();

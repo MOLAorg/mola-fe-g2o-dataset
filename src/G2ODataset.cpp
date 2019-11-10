@@ -24,7 +24,7 @@
 using namespace mola;
 
 // arguments: class_name, parent_class, class namespace
-IMPLEMENTS_MRPT_OBJECT_NS_PREFIX(G2ODataset, FrontEndBase, mola);
+IMPLEMENTS_MRPT_OBJECT(G2ODataset, FrontEndBase, mola)
 
 MRPT_INITIALIZER(do_register_G2ODataset) { MOLA_REGISTER_MODULE(G2ODataset); }
 
