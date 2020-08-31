@@ -18,8 +18,8 @@
 
 #include <mola-fe-g2o-dataset/G2ODataset.h>
 #include <mola-kernel/yaml_helpers.h>
+#include <mrpt/containers/yaml.h>
 #include <mrpt/core/initializer.h>
-#include <yaml-cpp/yaml.h>
 
 using namespace mola;
 
@@ -35,7 +35,7 @@ void G2ODataset::initialize(const std::string& cfg_block)
     MRPT_TRY_START
 
     // Load:
-    auto c   = YAML::Load(cfg_block);
+    auto c   = mrpt::containers::yaml::FromText(cfg_block);
     auto cfg = c["params"];
     MRPT_LOG_DEBUG_STREAM("Loading these params:\n" << cfg);
 
