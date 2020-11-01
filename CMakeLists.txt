@@ -29,6 +29,9 @@ mola_add_library(
 	TARGET ${PROJECT_NAME}
 	SOURCES ${LIB_SRCS} ${LIB_PUBLIC_HDRS}
 	PUBLIC_LINK_LIBRARIES
-	mola-kernel
-    mrpt::graphs
+		mola-kernel
+		mrpt::graphs
+	CMAKE_DEPENDENCIES
+		mola-kernel
+		mrpt-graphs
 )
