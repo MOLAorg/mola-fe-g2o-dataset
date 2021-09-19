@@ -13,6 +13,7 @@
 
 #include <mola-kernel/interfaces/FrontEndBase.h>
 #include <mrpt/graphs/CNetworkOfPoses.h>
+
 #include <list>
 
 namespace mola
@@ -32,7 +33,7 @@ class G2ODataset : public FrontEndBase
     virtual ~G2ODataset() override = default;
 
     // See docs in base class
-    void initialize(const std::string& cfg_block) override;
+    void initialize(const Yaml& cfg) override;
     void spinOnce() override;
 
     void onNewObservation(CObservation::Ptr&) override

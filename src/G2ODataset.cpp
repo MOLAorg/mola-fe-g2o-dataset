@@ -30,12 +30,11 @@ MRPT_INITIALIZER(do_register_G2ODataset) { MOLA_REGISTER_MODULE(G2ODataset); }
 
 G2ODataset::G2ODataset() = default;
 
-void G2ODataset::initialize(const std::string& cfg_block)
+void G2ODataset::initialize(const Yaml& c)
 {
     MRPT_TRY_START
 
     // Load:
-    auto c   = mrpt::containers::yaml::FromText(cfg_block);
     auto cfg = c["params"];
     MRPT_LOG_DEBUG_STREAM("Loading these params:\n" << cfg);
 
